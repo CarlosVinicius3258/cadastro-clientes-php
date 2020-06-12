@@ -1,7 +1,16 @@
 <?php
-    require_once "db_connect.php";
+require_once "db_connect.php";
+session_start();
+if (isset($_GET['id'])) :
 
-    $nome = mysqli_escape_string($connect,$_POST['nome']);
-    $sobrenome = mysqli_escape_string($connect,$_POST['sobrenome']);
-    $email = mysqli_escape_string($connect, $_POST['email']);
-    $idade = mysqli_escape_string($connect, $_POST['idade']);
+    $id = mysqli_escape_string($connect, $_GET['id']);
+    $sql = "DELETE FROM clientes where id='$id' ";
+    if (mysqli_query($connect, $sql)) :
+        $_SESSION['message'] = "Sucesso ao deletar cliente!!";
+        header('Location: ../index');
+    else :
+        $_SESSION['message'] = "Falha ao deletar cliente!!";
+        header('location: ../index');
+    endif;
+
+endif;
