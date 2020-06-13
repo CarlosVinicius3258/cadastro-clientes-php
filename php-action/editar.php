@@ -19,22 +19,22 @@ endif;
         <form action="update.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
             <div class="input-field col s12">
-                <input type="text" name="nome" id="nome" value="<?php echo $dados['nome']; ?>">
+                <input type="text" name="nome" id="nome" value="<?php echo $dados['nome']; ?>" required>
                 <label for="nome">Nome</label>
             </div>
 
             <div class="input-field col s12">
-                <input type="text" name="sobrenome" id="sobrenome" value="<?php echo $dados['sobrenome']; ?>">
+                <input type="text" name="sobrenome" id="sobrenome" value="<?php echo $dados['sobrenome']; ?>" required>
                 <label for="sobrenome">Sobrenome</label>
             </div>
 
             <div class="input-field col s12">
-                <input type="email" name="email" id="email" value="<?php echo $dados['email']; ?>">
+                <input type="email" name="email" id="email" value="<?php echo $dados['email']; ?>" required>
                 <label for="email">Email</label>
             </div>
 
             <div class="input-field col s12">
-                <input type="text" name="idade" id="idade" value="<?php echo $dados['idade']; ?>">
+                <input type="text" name="idade" id="idade" value="<?php echo $dados['idade']; ?>" required>
                 <label for="idade">Idade</label>
             </div>
             <button type="submit" name="btn-atualizar" class="btn">Atualizar</button>
