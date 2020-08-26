@@ -1,1 +1,1 @@
-# Simples Sistema de Cadastro em php
+# Sistema Simples de Cadastro em php
